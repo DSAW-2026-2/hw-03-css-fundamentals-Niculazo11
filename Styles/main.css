@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+/*this link imports the Playfair Display font */
+body {
+    background-color: #97c8f0;
+
+    header{
+        background-color: #8cb7f0;
+         font-weight: bold;
+            display: flex;
+            padding: 2px 50px;
+    }
+    .logo {
+            color: #ffffff;
+            font-size: 2rem;
+            text-align: left;
+            font-family: 'Playfair Display', sans-serif;
+        }
+    nav {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    nav a {
+  text-decoration: none;
+}
+    .home, .about-us {
+        color: #ffffff;
+        margin-left: 20px;
+        font-weight: bold;
+    }
+}
