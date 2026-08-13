@@ -2,12 +2,12 @@
 /*this link imports the Playfair Display font */
 
 body {
-    background-color: #97c8f0;
+    background-color: rgb(149, 248, 165);
     margin: 0;
 
 
     header{
-        background-color: #8cb7f0;
+        background-color: #8ff08c;
          font-weight: bold;
             display: flex;
             padding: 2px 50px;
@@ -23,7 +23,7 @@ body {
             right: 0; /* This positions the header at the very right of the page */
     }
     .logo {
-            color: #ffffff;
+            color: #000000;
             font-size: 2rem;
             text-align: left;
             font-family: 'Playfair Display', sans-serif;
@@ -42,7 +42,7 @@ body {
 }
 
     .home, .about-us {
-        color: rgb(253, 253, 253);
+        color: rgb(8, 8, 8);
         margin-right: 20px;
         marguin-left: 20px;
         font-weight: bold;
@@ -50,7 +50,7 @@ body {
         text-transform:capitalize;
     }
     .hero-section {
-        background-color: #8ce9f0;
+        background-color: #71f78e;
         padding: 100px 20px;
         text-align: center;
         width: 100%;
@@ -66,7 +66,7 @@ body {
         font-size: 64px;
         font-weight: 600;
         margin-bottom: 20px;
-        color: #05076b;
+        color: #000000;
         font-family: 'Playfair Display', sans-serif;
     }
     .hero-section p {
@@ -76,8 +76,8 @@ body {
         padding: 30px 0px;
 }
     .adopt-button {
-        background-color: #05076b;
-        color: #ffffff;
+        background-color: #000000;
+        color: #f8f4f4;
         border: none;
         padding: 10px 20px;
         font-size: 18px;
