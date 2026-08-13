@@ -85,4 +85,28 @@ body {
         border-radius: 5px;
         text-decoration: none;
 }
+.care {
+    background-color: #000000;
+    color: #f8f4f4;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-decoration: none;
+}
+.feature-titles{
+    display: flex;
+    justify-content: space-around;
+    height: 100vh;
+}
+.adopt{
+    height: 100vh;
+}
+.care{
+    height: 100vh;
+}
+.dog-park{
+    height: 100vh;
+}
 }
