@@ -1,13 +1,39 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
 /*this link imports the Playfair Display font */
 
+/*MODO OSCURO*/
+
+    :root {
+        --background: rgb(149, 248, 165); /*Background*/
+        --background-header: #8ff08c; /*Header*/
+        --background-hero: #71f78e; /*Hero Section*/
+        --background-join: rgb(44, 182, 78); /*Join Us*/
+        --background-read: rgb(21, 116, 62); /*Read More - Join Us Button*/
+        --white-1: #f8f4f4; /*Buttons*/
+        --white-2: white; /*Buttons*/
+        --black-header: rgb(8, 8, 8); /*Home - Dark Mode*/
+        --texts: #000000; /*Texts*/
+    }
+
+    body.dark-mode { /*Alternative color pallet*/
+        --background: #18351f; /*Background*/
+        --background-header: #214d2a; /*Header*/
+        --background-hero: #1c5a2c; /*Hero Section*/
+        --background-join: #17652e; /*Join Us*/
+        --background-read: #5d7467; /*Read More - Join Us Button*/
+        --white-1: #080808; /*Buttons*/
+        --white-2: #ffffff; /*Buttons*/
+        --black-header: #ffffff; /*Home - Dark Mode*/
+        --texts: #ffffff; /*Texts*/
+    }
+
 body {
-    background-color: rgb(149, 248, 165);
+    background-color: var(--background);
     margin: 0;
 
 
     header{
-        background-color: #8ff08c;
+        background-color: var(--background-header);
          font-weight: bold;
             display: flex;
             padding: 2px 50px;
@@ -23,7 +49,7 @@ body {
             right: 0; /* This positions the header at the very right of the page */
     }
     .logo {
-            color: #000000;
+            color: var(--texts);
             font-size: 2rem;
             text-align: left;
             font-family: 'Playfair Display', sans-serif;
@@ -41,8 +67,8 @@ body {
     font-size: 20px;
 }
 
-    .home, .about-us {
-        color: rgb(8, 8, 8);
+    .home, .dark-mode {
+        color: var(--black-header);
         margin-right: 20px;
         margin-left: 20px;
         font-weight: bold;
@@ -50,7 +76,7 @@ body {
         text-transform:capitalize;
     }
     .hero-section {
-        background-color: #71f78e;
+        background-color: var(--background-hero);
         padding: 100px 20px;
         text-align: center;
         width: 100%;
@@ -66,19 +92,19 @@ body {
         font-size: 64px;
         font-weight: 600;
         margin-bottom: 20px;
-        color: #000000;
+        color: var(--texts);
         font-family: 'Playfair Display', sans-serif;
     }
     .hero-section p {
         font-size: 20px;
-        color: #000000;
+        color: var(--texts);
         font-family: 'Playfair Display', sans-serif;
         padding: 30px 0px;
     }
 
     .adopt-button {
-        background-color: #000000;
-        color: #f8f4f4;
+        background-color: var(--texts);
+        color: var(--white-1);
         border: none;
         padding: 10px 20px;
         font-size: 18px;
@@ -99,17 +125,17 @@ body {
     .read-more a {
         display: inline-block;
         padding: 10px 20px;
-        background-color: rgb(21, 116, 62);
-        color: white;
+        background-color: var(--background-read);
+        color: var(--white-2);
         font-size: 15px;
     }
 
     .join-us {
-        background-color:rgb(44, 182, 78);
+        background-color:var(--background-join);
         padding: 100px 20px;
         text-align: center;
         width: 100%;
-        height: 25vh;
+        height: 27vh;
         padding: 0px 100px;
         box-sizing: border-box;
     }
@@ -117,13 +143,13 @@ body {
     .join-us button {
         display: inline-block;
         padding: 5px 10px;
-        background-color: rgb(21, 116, 62);
-        color: white;
+        background-color: var(--background-read);
+        color: var(--white-2);
     } 
 
     .adopt-button{
-        background-color: #000000;
-        color: #f8f4f4;
+        background-color: var(--texts);
+        color: var(--white-1);
         border: none;
         padding: 10px 20px;
         font-size: 18px;
@@ -146,7 +172,7 @@ body {
 
     .adopt p {
         font-size: 20px;
-        color: #000000;
+        color: var(--texts);
         font-family: 'Playfair Display', sans-serif;
         padding: 30px 100px;
         text-align: left;
