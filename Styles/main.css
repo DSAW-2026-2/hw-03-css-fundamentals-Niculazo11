@@ -41,6 +41,37 @@ body {
     font-size: 20px;
 }
 
+
+.feature-titles {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+
+    width: 100%;
+    gap: 20px;
+}
+
+
+.feature-titles article {
+    flex: 1;
+    text-align: center;
+}
+
+.feature-titles h2 {
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 25px;
+}
+
+.feature-titles img {
+    width: 90%;
+    max-width: 300px;
+
+    border-radius: 20px;
+
+    display: block;
+    margin: auto;
+}
     .home, .about-us {
         color: rgb(8, 8, 8);
         margin-right: 20px;
@@ -49,35 +80,8 @@ body {
         align-items: center;
         text-transform:capitalize;
     }
-    .hero-section {
-        background-color: #71f78e;
-        padding: 100px 20px;
-        text-align: center;
-        width: 100%;
-        height: 100vh; /* This sets the height of the hero section to be 100% of the viewport height */
-        padding: 0px 100px; /* This adds padding to the left and right of the hero section */
-        display: flex; /* This makes the hero section a flex container */
-        align-items: center;
-        justify-content: space-around;
-        box-sizing: border-box; /* This makes sure that the padding is included in the width and height of the hero section */
-    }
-
-    .hero-section h1 {
-        font-size: 64px;
-        font-weight: 600;
-        margin-bottom: 20px;
-        color: #000000;
-        font-family: 'Playfair Display', sans-serif;
-    }
-    .hero-section p {
-        font-size: 20px;
-        color: #000000;
-        font-family: 'Playfair Display', sans-serif;
-        padding: 30px 0px;
-    }
-
     .adopt-button {
-        background-color: #000000;
+        background-color: #3d3131;
         color: #f8f4f4;
         border: none;
         padding: 10px 20px;
@@ -170,5 +174,9 @@ body {
         margin-right: 100px;
         flex: 1;
         width: 25%;
+}
+img {
+    max-width: 100%;
+    height: auto;
 }
 }
