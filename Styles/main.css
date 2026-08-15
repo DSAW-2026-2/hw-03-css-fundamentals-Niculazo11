@@ -27,23 +27,31 @@
         --texts: #ffffff; /*Texts*/
     }
 
+*{
+    box-sizing: border-box; /*It's better to apply it to the hole page*/
+}
+
 body {
     background-color: var(--background);
     margin: 0;
+    width: 100%;
+    overflow-x: hidden;/*Avoid element overflows*/
 
     main{
         display: grid;
         place-items: center;
+        width: 100%;
     }
 
     header{
         background-color: var(--background-header);
         font-weight: bold;
         display: flex;
-        padding: 2px 50px;
+        padding: 2px 5%;
         box-sizing: border-box;
         width:100%;
         justify-content: space-between;
+        align-items: center;
 
             /* This sets the header to be fixed at the top of the page */
 
@@ -69,6 +77,7 @@ body {
         display: flex;
         justify-content: flex-end;
         align-items: center;
+        flex-wrap: wrap;/*Change of line when there's no space*/
     }
 
     nav a {
@@ -82,24 +91,25 @@ body {
         padding: 100px 20px;
         text-align: center;
         width: 100%;
-        height: 0vh;
+        height: auto;
+        max-height: 10px;
         box-sizing: border-box;
         margin-top: 10px;
         margin-bottom: 100px;
-        font-size: 40px;
+        font-size: clamp(24px, 4vw, 40px); /*Progressive adaptation*/
     }
 
     .feature-titles {
         display: flex;
         justify-content: space-around;
         align-items: flex-start;
-
+        flex-wrap: wrap;
         width: 100%;
-        height: 100%;
+        height: auto;
         gap: 20px;
     }
     .feature-titles article {
-        flex: 1;
+        flex: 1 1 250px; /*Reasonable size*/
         text-align: center;
     }
     .feature-titles h2 {
@@ -110,18 +120,16 @@ body {
     .feature-titles img {
         width: 90%;
         max-width: 300px;
-
         border-radius: 20px;
-
         display: block;
         margin: auto;
     }
 
     .readMore {
-        padding: 50px 100px;
+        padding: 50px 5%;
         text-align: center;
         width: 100%;
-        height: 100%;
+        height: auto;
         box-sizing: border-box;
     }
     .readMore a {
@@ -133,11 +141,11 @@ body {
     }
 
     .care{
-        height: 100vh;
+        height: auto;
         flex: 1;
     }
     .dog-park{
-        height: 100vh;
+        height: auto;
         flex: 1;
     }
 
@@ -158,12 +166,11 @@ body {
     }
 
     .ForStudents h2 {
-        font-size: 40px;
         font-weight: 400;
         margin-bottom: 25px;
         text-align: center;
         display: flex;
-        font-size: 50px;
+        font-size: clamp(28px, 4vw, 50px);
         justify-content: center;
     }
     .ForStudents p {
@@ -176,15 +183,16 @@ body {
         align-items: center;
         justify-content: space-between;
         width: 100%;
-        height: 60vh;
+        max-width: 1400px;
+        height: auto;
         gap: 50px;
-        padding: 0 100px;
+        padding: 0 5%;
         box-sizing: border-box;
-        margin-top: 30px;
-        margin-bottom: 50px;
+        margin: 30px auto 50px;
     }
     .engageStudents img {
         width: 30%;
+        min-width: 0;
         max-width: 450px;
         height: auto;
         display: block;
@@ -196,7 +204,7 @@ body {
         background-position: center;
         background-repeat: no-repeat;
         width: 100%;
-        min-height: 55vh;
+        min-height: 10vh;
         text-align: center;
         margin-top: 40px;
         margin-bottom: 80px;
@@ -206,16 +214,16 @@ body {
         display: flex;
         align-items: center;
         width: 100%;
-        height: 80vh;
+        max-width: 1400px;
+        height: auto;
         gap: 50px;
-        padding: 0 100px;
+        padding: 0 5%;
         box-sizing: border-box;
-        margin-top: 40px;
-        margin-bottom: 40px;
+        margin: 40px auto;
     }
     .review img{
         width: 50%;
-        height: 100%;
+        height: auto;
         object-fit: contain;
     }
     .review-text{
@@ -233,18 +241,18 @@ body {
 
     .issues {
         background-color: var(--background-hero);
-        padding: 40px 20px;
+        padding: 40px 5%;
         text-align: center;
         width: 100%;
-        height: 30vh;
+        height: auto;
     }
     .issues h2{
         font-family: 'Playfair Display', sans-serif;
-        font-size: 50px;
+        font-size: clamp(28px, 4vw, 50px);
     }
     .issues p {     
         font-family: 'Playfair Display', sans-serif;
-        font-size: 34px;
+        font-size: clamp(18px, 2.5vw, 34px);
     }
     .learnMore {
         background-color: var(--texts);
@@ -267,14 +275,16 @@ body {
 
     .join-us {
         background-color:var(--background-join);
-        padding: 100px 20px;
+        padding: 40px 5%;
         text-align: center;
-        width: 30%;
-        height: 27vh;
-        padding: 0px 100px;
+        width: 100%; 
+        max-width: 600px;
+        height: auto;
+        min-height: 250px;
         box-sizing: border-box;
         display: grid;
-        place-items: center;    
+        place-items: center;
+        margin: 0 auto;    
     }
     .join-us h2{
         margin-bottom: 1px;
@@ -291,5 +301,85 @@ body {
     footer{
         text-align: center;
         margin-top: 30px;
+        padding: 20px 5%;
+    }
+
+    /*MOBILE DESIGN*/
+
+    /*Cellphone*/
+    @media (max-width: 600px){
+        header{
+            padding: 5px 15px;
+        }
+
+        nav{
+            justify-content: center;
+        }
+        nav a{
+            font-size: 16px;
+        }
+
+        .home, .dark-mode{
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+
+        .feature-titles{
+            flex-direction: column;
+            align-items: center;
+        }
+        .feature-titles article{
+            width: 90%;
+            flex: none;
+        }
+
+        .engageStudents{
+            flex-direction: column;
+            gap: 30px;
+            padding: 20px 5%;
+        }
+        .engageStudents img{
+            width: 80%;
+            max-width: 400px;
+        }
+
+        .review{
+            flex-direction: column;
+            gap: 30px;
+            padding: 20px 5%;
+        }
+        .review img, .review-text{
+            width: 90%;
+        }
+
+        .join-us{
+            width: 100%;
+            max-width: none;
+        }
+    }
+
+    /*Tablet*/
+    @media (min-width: 6001px) and (max-width: 1024px){
+        header{
+            padding: 5px 5%;
+        }
+
+        nav a{
+            font-size: 18px;
+        }
+
+        .engageStudents{
+            gap: 30px;
+            padding: 0 5%;
+        }
+
+        .review{
+            gap: 30px;
+            padding: 0 5%;
+        }
+
+        .join-us{
+            max-width: 800px;
+        }
     }
 }
