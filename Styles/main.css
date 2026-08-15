@@ -31,42 +31,31 @@ body {
     background-color: var(--background);
     margin: 0;
 
+    main{
+        display: grid;
+        place-items: center;
+    }
 
     header{
         background-color: var(--background-header);
-         font-weight: bold;
-            display: flex;
-            padding: 2px 50px;
-            box-sizing: border-box;
-            width:100%;
-            justify-content: space-between;
+        font-weight: bold;
+        display: flex;
+        padding: 2px 50px;
+        box-sizing: border-box;
+        width:100%;
+        justify-content: space-between;
 
             /* This sets the header to be fixed at the top of the page */
 
-            position: fixed; /* This makes the header stay at the top of the page when scrolling */
-            top: 0; /* This positions the header at the very top of the page */
-            left: 0; /* This positions the header at the very left of the page */
-            right: 0; /* This positions the header at the very right of the page */
-    }
-    .logo {
-            color: var(--texts);
-            font-size: 2rem;
-            text-align: left;
-            font-family: 'Playfair Display', sans-serif;
-        }
-    nav {
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
+        position: fixed; /* This makes the header stay at the top of the page when scrolling */
+        top: 0; /* This positions the header at the very top of the page */
+        left: 0; /* This positions the header at the very left of the page */
+        right: 0; /* This positions the header at the very right of the page */
     }
 
-    nav a {
-    text-decoration: none;
-    font-family: 'Playfair Display', sans-serif;
-    font-weight: 600;
-    font-size: 20px;
-}
-
+    .home, .about-us {
+        color: var(--black-header);
+    }
     .home, .dark-mode {
         color: var(--black-header);
         margin-right: 20px;
@@ -75,54 +64,67 @@ body {
         align-items: center;
         text-transform:capitalize;
     }
-    .hero-section {
-        background-color: var(--background-hero);
-        padding: 100px 20px;
-        text-align: center;
-        width: 100%;
-        height: 100vh; /* This sets the height of the hero section to be 100% of the viewport height */
-        padding: 0px 100px; /* This adds padding to the left and right of the hero section */
-        display: flex; /* This makes the hero section a flex container */
+
+    nav {
+        display: flex;
+        justify-content: flex-end;
         align-items: center;
-        justify-content: space-around;
-        box-sizing: border-box; /* This makes sure that the padding is included in the width and height of the hero section */
     }
 
-    .hero-section h1 {
-        font-size: 64px;
-        font-weight: 600;
-        margin-bottom: 20px;
-        color: var(--texts);
-        font-family: 'Playfair Display', sans-serif;
-    }
-    .hero-section p {
-        font-size: 20px;
-        color: var(--texts);
-        font-family: 'Playfair Display', sans-serif;
-        padding: 30px 0px;
-    }
-
-    .adopt-button {
-        background-color: var(--texts);
-        color: var(--white-1);
-        border: none;
-        padding: 10px 20px;
-        font-size: 18px;
-        cursor: pointer;
-        border-radius: 5px;
+    nav a {
         text-decoration: none;
+        font-family: 'Playfair Display', sans-serif;
+        font-weight: 600;
+        font-size: 20px;
     }
 
-    .read-more {
+    .phrase {
         padding: 100px 20px;
         text-align: center;
         width: 100%;
-        height: 20vh;
-        padding: 0px 100px;
+        height: 0vh;
+        box-sizing: border-box;
+        margin-top: 10px;
+        margin-bottom: 100px;
+        font-size: 40px;
+    }
+
+    .feature-titles {
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+
+        width: 100%;
+        height: 100%;
+        gap: 20px;
+    }
+    .feature-titles article {
+        flex: 1;
+        text-align: center;
+    }
+    .feature-titles h2 {
+        font-size: 20px;
+        font-weight: 400;
+        margin-bottom: 25px;
+    }
+    .feature-titles img {
+        width: 90%;
+        max-width: 300px;
+
+        border-radius: 20px;
+
+        display: block;
+        margin: auto;
+    }
+
+    .readMore {
+        padding: 50px 100px;
+        text-align: center;
+        width: 100%;
+        height: 100%;
         box-sizing: border-box;
     }
-
-    .read-more a {
+    .readMore a {
         display: inline-block;
         padding: 10px 20px;
         background-color: var(--background-read);
@@ -130,24 +132,121 @@ body {
         font-size: 15px;
     }
 
-    .join-us {
-        background-color:var(--background-join);
-        padding: 100px 20px;
-        text-align: center;
-        width: 100%;
-        height: 27vh;
-        padding: 0px 100px;
-        box-sizing: border-box;
+    .care{
+        height: 100vh;
+        flex: 1;
+    }
+    .dog-park{
+        height: 100vh;
+        flex: 1;
     }
 
-    .join-us button {
-        display: inline-block;
-        padding: 5px 10px;
-        background-color: var(--background-read);
-        color: var(--white-2);
-    } 
+    img {
+        max-width: 100%;
+        height: auto;
+    }
 
-    .adopt-button{
+    .readMore img {
+        width: 800px;
+        height: auto;
+        max-width: 90%;
+        border-radius: 40px;
+        display: block;
+        margin: 0 auto;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+
+    .ForStudents h2 {
+        font-size: 40px;
+        font-weight: 400;
+        margin-bottom: 25px;
+        text-align: center;
+        display: flex;
+        font-size: 50px;
+        justify-content: center;
+    }
+    .ForStudents p {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+    }
+    .engageStudents {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        height: 60vh;
+        gap: 50px;
+        padding: 0 100px;
+        box-sizing: border-box;
+        margin-top: 30px;
+        margin-bottom: 50px;
+    }
+    .engageStudents img {
+        width: 30%;
+        max-width: 450px;
+        height: auto;
+        display: block;
+        border-radius: 10%;
+    }
+
+    .imgIndi {
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 100%;
+        min-height: 55vh;
+        text-align: center;
+        margin-top: 40px;
+        margin-bottom: 80px;
+    }
+
+    .review {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 80vh;
+        gap: 50px;
+        padding: 0 100px;
+        box-sizing: border-box;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+    .review img{
+        width: 50%;
+        height: 100%;
+        object-fit: contain;
+    }
+    .review-text{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .review-author{
+        margin-top: 30xp;
+    }
+    .review-author p{
+        margin: 5px 0;
+    }
+
+    .issues {
+        background-color: var(--background-hero);
+        padding: 40px 20px;
+        text-align: center;
+        width: 100%;
+        height: 30vh;
+    }
+    .issues h2{
+        font-family: 'Playfair Display', sans-serif;
+        font-size: 50px;
+    }
+    .issues p {     
+        font-family: 'Playfair Display', sans-serif;
+        font-size: 34px;
+    }
+    .learnMore {
         background-color: var(--texts);
         color: var(--white-1);
         border: none;
@@ -158,43 +257,39 @@ body {
         text-decoration: none;
     }
 
-    .feature-titles{
-        display: flex;
-        justify-content: space-around;
-        height: 100vh;
+    .AboutUs {
+        padding: 10px 20px;
+        font-size: 18px;
+        text-align: center;
+        margin-top: 10px;
+        margin-bottom: 10px;
     }
 
-    .adopt{
-        height: 100vh;
-        justify-content: space-around;
-
+    .join-us {
+        background-color:var(--background-join);
+        padding: 100px 20px;
+        text-align: center;
+        width: 30%;
+        height: 27vh;
+        padding: 0px 100px;
+        box-sizing: border-box;
+        display: grid;
+        place-items: center;    
     }
-
-    .adopt p {
-        font-size: 20px;
-        color: var(--texts);
-        font-family: 'Playfair Display', sans-serif;
-        padding: 30px 100px;
-        text-align: left;
-        margin-left: 60px;
-        margin-top: 120px;
-        flex: 1;
-        width: 45%;
-}
-    .care{
-        height: 100vh;
-        flex: 1;
-}
-    .dog-park{
-        height: 100vh;
-        flex: 1;
-}
-    .pancho-image{
-        display: flex;
-        justify-content: center;
-        float:right;
-        margin-right: 100px;
-        flex: 1;
-        width: 25%;
-}
+    .join-us h2{
+        margin-bottom: 1px;
+    }
+    .join-us button {
+        display: inline-block;
+        padding: 5px 10px;
+        margin-top: 10px;
+        border-radius: 5%;
+        background-color: var(--background-read);
+        color: var(--white-2);
+    }
+    
+    footer{
+        text-align: center;
+        margin-top: 30px;
+    }
 }
