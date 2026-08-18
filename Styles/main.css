@@ -38,79 +38,42 @@ body {
 }
 
 
+*{
+    box-sizing: border-box; /*It's better to apply it to the hole page*/
+}
+
 body {
     background-color: var(--background);
     margin: 0;
+    width: 100%;
+    overflow-x: hidden;/*Avoid element overflows*/
 
+    main{
+        display: grid;
+        place-items: center;
+        width: 100%;
+    }
 
     header{
         background-color: var(--background-header);
-         font-weight: bold;
-            display: flex;
-            padding: 2px 50px;
-            box-sizing: border-box;
-            width:100%;
-            justify-content: space-between;
+        font-weight: bold;
+        display: flex;
+        padding: 2px 5%;
+        box-sizing: border-box;
+        width:100%;
+        justify-content: space-between;
+        align-items: center;
 
             /* This sets the header to be fixed at the top of the page */
 
-            position: fixed; /* This makes the header stay at the top of the page when scrolling */
-            top: 0; /* This positions the header at the very top of the page */
-            left: 0; /* This positions the header at the very left of the page */
-            right: 0; /* This positions the header at the very right of the page */
-    }
-    .logo {
-            color: var(--texts);
-            font-size: 2rem;
-            text-align: left;
-            font-family: 'Playfair Display', sans-serif;
-        }
-    nav {
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
+        position: fixed; /* This makes the header stay at the top of the page when scrolling */
+        top: 0; /* This positions the header at the very top of the page */
+        left: 0; /* This positions the header at the very left of the page */
+        right: 0; /* This positions the header at the very right of the page */
     }
 
-    nav a {
-    text-decoration: none;
-    font-family: 'Playfair Display', sans-serif;
-    font-weight: 600;
-    font-size: 20px;
-}
-
-
-.feature-titles {
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
-
-    width: 100%;
-    gap: 20px;
-}
-
-
-.feature-titles article {
-    flex: 1;
-    text-align: center;
-}
-
-.feature-titles h2 {
-    font-size: 20px;
-    font-weight: 400;
-    margin-bottom: 25px;
-}
-
-.feature-titles img {
-    width: 90%;
-    max-width: 300px;
-
-    border-radius: 20px;
-
-    display: block;
-    margin: auto;
-}
     .home, .about-us {
-        color: rgb(8, 8, 8);
+        color: var(--black-header);
     }
     .home, .dark-mode {
         color: var(--black-header);
@@ -120,53 +83,67 @@ body {
         align-items: center;
         text-transform:capitalize;
     }
-    .hero-section {
-        background-color: var(--background-hero);
+
+    nav {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        flex-wrap: wrap;/*Change of line when there's no space*/
+    }
+
+    nav a {
+        text-decoration: none;
+        font-family: 'Playfair Display', sans-serif;
+        font-weight: 600;
+        font-size: 20px;
+    }
+
+    .phrase {
         padding: 100px 20px;
         text-align: center;
         width: 100%;
-        height: 100vh; /* This sets the height of the hero section to be 100% of the viewport height */
-        padding: 0px 100px; /* This adds padding to the left and right of the hero section */
-        display: flex; /* This makes the hero section a flex container */
-        align-items: center;
+        height: auto;
+        max-height: 10px;
+        box-sizing: border-box;
+        margin-top: 10px;
+        margin-bottom: 100px;
+        font-size: clamp(24px, 4vw, 40px); /*Progressive adaptation*/
+    }
+
+    .feature-titles {
+        display: flex;
         justify-content: space-around;
-        box-sizing: border-box; /* This makes sure that the padding is included in the width and height of the hero section */
+        align-items: flex-start;
+        flex-wrap: wrap;
+        width: 100%;
+        height: auto;
+        gap: 20px;
     }
-
-    .hero-section h1 {
-        font-size: 64px;
-        font-weight: 600;
-        margin-bottom: 20px;
-        color: var(--texts);
-        font-family: 'Playfair Display', sans-serif;
+    .feature-titles article {
+        flex: 1 1 250px; /*Reasonable size*/
+        text-align: center;
     }
-    .hero-section p {
+    .feature-titles h2 {
         font-size: 20px;
-        color: var(--texts);
-        font-family: 'Playfair Display', sans-serif;
-        padding: 30px 0px;
+        font-weight: 400;
+        margin-bottom: 25px;
     }
-
-    .adopt-button {
-        background-color: var(--texts);
-        color: var(--white-1);
-        border: none;
-        padding: 10px 20px;
-        font-size: 18px;
-        cursor: pointer;
-        border-radius: 5px;
-        text-decoration: none;
+    .feature-titles img {
+        width: 90%;
+        max-width: 300px;
+        border-radius: 20px;
+        display: block;
+        margin: auto;
     }
 
     .readMore {
-    padding: 50px 100px;
-    text-align: center;
-    width: 100%;
-    height: auto;
-    box-sizing: border-box;
-}
-
-    .read-more a {
+        padding: 50px 5%;
+        text-align: center;
+        width: 100%;
+        height: auto;
+        box-sizing: border-box;
+    }
+    .readMore a {
         display: inline-block;
         padding: 10px 20px;
         background-color: var(--background-read);
@@ -174,24 +151,121 @@ body {
         font-size: 15px;
     }
 
-    .join-us {
-        background-color:var(--background-join);
-        padding: 100px 20px;
-        text-align: center;
-        width: 100%;
-        height: 27vh;
-        padding: 0px 100px;
-        box-sizing: border-box;
+    .care{
+        height: auto;
+        flex: 1;
+    }
+    .dog-park{
+        height: auto;
+        flex: 1;
     }
 
-    .join-us button {
-        display: inline-block;
-        padding: 5px 10px;
-        background-color: var(--background-read);
-        color: var(--white-2);
-    } 
+    img {
+        max-width: 100%;
+        height: auto;
+    }
 
-    .adopt-button{
+    .readMore img {
+        width: 800px;
+        height: auto;
+        max-width: 90%;
+        border-radius: 40px;
+        display: block;
+        margin: 0 auto;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+
+    .ForStudents h2 {
+        font-weight: 400;
+        margin-bottom: 25px;
+        text-align: center;
+        display: flex;
+        font-size: clamp(28px, 4vw, 50px);
+        justify-content: center;
+    }
+    .ForStudents p {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+    }
+    .engageStudents {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 1400px;
+        height: auto;
+        gap: 50px;
+        padding: 0 5%;
+        box-sizing: border-box;
+        margin: 30px auto 50px;
+    }
+    .engageStudents img {
+        width: 30%;
+        min-width: 0;
+        max-width: 450px;
+        height: auto;
+        display: block;
+        border-radius: 10%;
+    }
+
+    .imgIndi {
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 100%;
+        min-height: 10vh;
+        text-align: center;
+        margin-top: 40px;
+        margin-bottom: 80px;
+    }
+
+    .review {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        max-width: 1400px;
+        height: auto;
+        gap: 50px;
+        padding: 0 5%;
+        box-sizing: border-box;
+        margin: 40px auto;
+    }
+    .review img{
+        width: 50%;
+        height: auto;
+        object-fit: contain;
+    }
+    .review-text{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .review-author{
+        margin-top: 30xp;
+    }
+    .review-author p{
+        margin: 5px 0;
+    }
+
+    .issues {
+        background-color: var(--background-hero);
+        padding: 40px 5%;
+        text-align: center;
+        width: 100%;
+        height: auto;
+    }
+    .issues h2{
+        font-family: 'Playfair Display', sans-serif;
+        font-size: clamp(28px, 4vw, 50px);
+    }
+    .issues p {     
+        font-family: 'Playfair Display', sans-serif;
+        font-size: clamp(18px, 2.5vw, 34px);
+    }
+    .learnMore {
         background-color: var(--texts);
         color: var(--white-1);
         border: none;
@@ -337,3 +411,4 @@ background-size: cover;
 }
 
 }
+
