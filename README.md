@@ -1,4 +1,8 @@
+# Nicolas Moreno Parra
+URL: https://dsaw-2026-2.github.io/hw-03-css-fundamentals-Niculazo11/
+
 # HW03 — CSS Fundamentals
+
 
 **Week 3 · DSAW · Universidad de La Sabana**
 
@@ -42,6 +46,8 @@ If you used AI to write CSS:
 - Which sections did you generate with AI?
 - What did you modify and why?
 - What was hardest to understand about the generated CSS?
+
+We used AI on ly to understand how to do the Dark mode. We adjusted some setting in order for it to doesn´t provoke any error. The hardest thing to understand was how to justify a div :p. 
 
 ## Deployment
 
