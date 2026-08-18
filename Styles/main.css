@@ -4,28 +4,39 @@
 /*MODO OSCURO*/
 
     :root {
-        --background: rgb(149, 248, 165); /*Background*/
-        --background-header: #8ff08c; /*Header*/
-        --background-hero: #71f78e; /*Hero Section*/
-        --background-join: rgb(44, 182, 78); /*Join Us*/
-        --background-read: rgb(21, 116, 62); /*Read More - Join Us Button*/
-        --white-1: #f8f4f4; /*Buttons*/
-        --white-2: white; /*Buttons*/
-        --black-header: rgb(8, 8, 8); /*Home - Dark Mode*/
-        --texts: #000000; /*Texts*/
-    }
+    --background: rgb(149, 248, 165);
+    --background-header: #8ff08c;
+    --background-hero: #71f78e;
+    --background-join: rgb(44, 182, 78);
+    --background-read: rgb(21, 116, 62);
+    --white-1: #f8f4f4;
+    --white-2: white;
+    --black-header: rgb(8, 8, 8);
+    --texts: #000000;
+}
 
-    body.dark-mode { /*Alternative color pallet*/
-        --background: #18351f; /*Background*/
-        --background-header: #214d2a; /*Header*/
-        --background-hero: #1c5a2c; /*Hero Section*/
-        --background-join: #17652e; /*Join Us*/
-        --background-read: #5d7467; /*Read More - Join Us Button*/
-        --white-1: #080808; /*Buttons*/
-        --white-2: #ffffff; /*Buttons*/
-        --black-header: #ffffff; /*Home - Dark Mode*/
-        --texts: #ffffff; /*Texts*/
-    }
+body:has(#darkMode:checked) {
+    --background: #18351f;
+    --background-header: #214d2a;
+    --background-hero: #1c5a2c;
+    --background-join: #17652e;
+    --background-read: #5d7467;
+    --white-1: #080808;
+    --white-2: #ffffff;
+    --black-header: #ffffff;
+    --texts: #ffffff;
+}
+
+/* TODO EL TEXTO EN BLANCO */
+body:has(#darkMode:checked) * {
+    color: white;
+}
+
+body {
+    background-color: var(--background);
+    color: var(--texts);
+}
+
 
 body {
     background-color: var(--background);
@@ -303,14 +314,16 @@ background-size: cover;
         height: 100vh;
 }
 
-.issues h2{
+.issues h2 {
     font-family: 'Playfair Display', sans-serif;
     font-size: 50px;
+    color: var(--texts);
 }
-.issues p { 
-    
- font-family: 'Playfair Display', sans-serif;
- font-size: 34px;
+
+.issues p {
+    font-family: 'Playfair Display', sans-serif;
+    font-size: 34px;
+    color: var(--texts);
 }
 .learnMore {
      background-color: var(--texts);
@@ -322,4 +335,5 @@ background-size: cover;
         border-radius: 5px;
         text-decoration: none;
 }
+
 }
